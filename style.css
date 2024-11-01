@@ -1,21 +1,58 @@
 html {
-    background-color: black;
+    background-image: url(images/cyberpunk-bg.gif);
 }
 
-h1 {
+h1 { 
     color: white;
     text-align: center;
 }
 
 .links {
     text-align: center;
-    font-style: bold;
+    background-color: rgba(154, 85, 185, 0.356);
+    border: 3px solid black;
+}
+
+#blog {
+    font-size: 20px;
+    text-align: center;
+    color: pink;
+}
+
+#blog:visited {
+    color: black;
 }
 
 #box {
+    background-color: rgba(0,0,0,75%);
     text-align: center;
     border: 1px solid white;
     color: white;
-    margin-left: 200px;
-    margin-right: 200px;
+    font-size: 20px;
+    padding-left: 185px;
+    padding-right: 185px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    float: left;
+}
+
+#info {
+    background-color: rgba(0,0,0,75%);
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-left: 3px;
+    margin-right: 10px;
+    float: right;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid pink;
 }
