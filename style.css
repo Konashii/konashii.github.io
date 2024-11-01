@@ -17,10 +17,27 @@ h1 {
     font-size: 20px;
     text-align: center;
     color: pink;
+    font-style: bold;
 }
 
 #blog:visited {
     color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.section {
+    flex: 1;
 }
 
 #box {
@@ -29,12 +46,11 @@ h1 {
     border: 1px solid white;
     color: white;
     font-size: 20px;
-    padding-left: 185px;
-    padding-right: 185px;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 2px;
-    float: left;
 }
 
 #info {
@@ -43,11 +59,10 @@ h1 {
     border: 1px solid white;
     color: white;
     font-size: 20px;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin-left: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 10px;
     margin-right: 10px;
-    float: right;
 }
 
 #avatar {
