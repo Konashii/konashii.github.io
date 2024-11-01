@@ -1,0 +1,21 @@
+html {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.links {
+    text-align: center;
+    font-style: bold;
+}
+
+#box {
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+}
