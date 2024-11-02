@@ -1,5 +1,9 @@
 html {
     background-image: url(images/cyberpunk-bg.gif);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1 { 
@@ -42,10 +46,7 @@ h1 {
 
 #box {
     background-color: rgba(0,0,0,75%);
-    text-align: center;
     border: 1px solid white;
-    color: white;
-    font-size: 20px;
     padding-left: 17.5%;
     padding-right: 17.5%;
     margin-left: 10px;
@@ -53,9 +54,16 @@ h1 {
     margin-bottom: 2px;
 }
 
+#box-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
 #info {
     background-color: rgba(0,0,0,75%);
-    text-align: center;
+    text-align:center;
     border: 1px solid white;
     color: white;
     font-size: 20px;
