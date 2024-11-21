@@ -9,23 +9,13 @@ html {
 h1 { 
     color: white;
     text-align: center;
+    font-style: "Lucida Console", "Courier New", monospace;
 }
 
 .links {
     text-align: center;
     background-color: rgba(154, 85, 185, 0.356);
     border: 3px solid black;
-}
-
-#blog {
-    font-size: 20px;
-    text-align: center;
-    color: pink;
-    font-style: bold;
-}
-
-#blog:visited {
-    color: black;
 }
 
 .container {
@@ -59,6 +49,23 @@ h1 {
     color: white;
     font-size: 20px;
     padding-top: 20px;
+}
+
+#link-buttons {
+    background-color: rgba(151, 50, 160, 0.301);
+    border: black solid;
+    color: white;
+    padding: 20px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+#blog-text {
+    color: rgb(159, 111, 187);
 }
 
 #info {
