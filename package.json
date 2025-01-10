@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "astro": "^5.1.4"
