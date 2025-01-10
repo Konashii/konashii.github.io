@@ -1,0 +1,30 @@
+---
+const { blockTitle } = Astro.props;
+---
+
+<style>
+
+    .title {
+        color: rgb(137, 70, 192);
+        margin: 1rem 0;
+        font-size: 2.5rem;
+        text-align: center;
+        font-family: cursive;
+    }
+
+    .block {
+        background-color: rgba(0, 0, 0, 0.438);
+        margin-top: 25px;
+        padding: 5px 50px;
+        border: 3px solid black;
+        border-radius: 20px;
+        flex-wrap: nowrap;
+    }
+
+</style>
+
+<div class="block">
+    <h2 class="title">{blockTitle}</h2>
+    <hr>
+    <slot />
+</div>
