@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://konahii.github.io',
-    base: '/docs'
+    site: 'https://konashii.github.io',
+    base: 'konashii.github.io'
 });
