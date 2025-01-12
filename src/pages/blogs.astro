@@ -2,13 +2,34 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Block from '../components/Block.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+
+function capitalize(word: string) {
+	return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
 ---
+
+<style>
+
+	a {
+		text-decoration: none;
+		font-size: 1.2rem;
+		padding: 2px 5px;
+	}
+
+	a:hover {
+		background-color: #531a7975;
+	}
+
+	
+
+</style>
 
 <BaseLayout pageTitle="Blogs" tabTitle="Blogs">
 	<Block>
-		<p>Feel free to check out my blogs!</p>
+		<p>Feel free to check out my blog entries! (Don't have much right now-)</p>
 		<ul>
-			{allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+			{allPosts.map((post: any) => <li><a href={post.url}>{capitalize(post.frontmatter.title)}</a></li>)}
 		</ul>
 	</Block>
 </BaseLayout>
