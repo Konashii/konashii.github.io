@@ -27,7 +27,7 @@ function capitalize(word: string) {
 
 <BaseLayout pageTitle="Blogs" tabTitle="Blogs">
 	<Block>
-		<p>Feel free to check out my blog entries!</p>
+		<p>Feel free to check out my blog entries! (Don't have much right now-)</p>
 		<ul>
 			{allPosts.map((post: any) => <li><a href={post.url}>{capitalize(post.frontmatter.title)}</a></li>)}
 		</ul>
