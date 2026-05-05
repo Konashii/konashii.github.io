@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Block from '../components/Block.astro';
+import '../styles/global.css';
+
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
 function capitalize(word: string) {
@@ -9,27 +11,25 @@ function capitalize(word: string) {
 
 ---
 
-<style>
+<BaseLayout pageTitle="" tabtitle="Kona's Blogs!">
+  <div class="blog-body">
+    <section class="nav-body">
+      <Block blockTitle="Navigation">
+        <nav class="navigation">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/blogs" style="margin-top: 0.5em">My Blogs</a>
+        </nav>
+      </Block>
+    </section>
 
-	a {
-		text-decoration: none;
-		font-size: 1.2rem;
-		padding: 2px 5px;
-	}
-
-	a:hover {
-		background-color: #531a7975;
-	}
-
-	
-
-</style>
-
-<BaseLayout pageTitle="Blogs" tabTitle="Blogs">
-	<Block>
-		<p>Feel free to check out my blog entries! (Don't have much right now-)</p>
-		<ul>
-			{allPosts.map((post: any) => <li><a href={post.url}>{capitalize(post.frontmatter.title)}</a></li>)}
-		</ul>
-	</Block>
+    <section class="main-body">
+      <Block blockTitle="My Blogs">
+        <section class="post-list">
+          {allPosts.map((post: any) => <a class="post" href={post.url}>{capitalize(post.frontmatter.title)}</a>)}
+        </section>
+      </Block>
+    </section>
+  
+  </div>
 </BaseLayout>
+

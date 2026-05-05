@@ -10,15 +10,15 @@ const { tabTitle } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{tabTitle}</title>
 	</head>
 	<body>
 		<div class="background"></div>
-		<Header />
+    <!-- <Header /> -->
 		<slot />
-		<Footer />
+    <!-- <Footer /> -->
 		<script>import '../scripts/menu.js';</script>
 	</body>
 </html>

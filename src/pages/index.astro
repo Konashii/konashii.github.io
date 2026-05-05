@@ -1,66 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Block from '../components/Block.astro';
-import { Image } from 'astro:assets';
-import profilePicture from '../images/profile.jpg';
 import '../styles/global.css';
-
-const identity = {
-    name: "Kona",
-    hobbies: ["Coding", "Gaming", "Talking to friends"],
-    skills: ["HTML", "CSS", "JavaScript", "Python", "SQL"]
-}
 ---
 
 <BaseLayout pageTitle="About Me!" tabTitle="Home">
-    <div class="index-body">
-        <div class="left-body">
-            <Block blockTitle="Welcome!">
+  <div class="index-body">
+    <section class="nav-body">
+        <Block blockTitle="Navigation">
 
-                <style>
-                    p strong {
-                        color: rgb(209, 133, 219);
-                    }
-                </style>
+            <nav class="navigation">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/blogs" style="margin-top: 0.5em">My Blogs</a>
+            </nav>
 
-                <h3 style="color: white;text-align:center">What you'll see here</h3>
-                <p>I will be working on this website on my free time and write blogs for Cybersecurity CTFs (Yes I do those!)</p>
-                <p>I also plan to showcase any personal projects I have done with documentation of how it works and the process of me creating it</p>
-                <p>No, I'm not a professional (Not yet at least..) but I do have a passion for technology and I always love to tinker with computers</p>
-                <br>
-                <p>
-                    This website is made using the <em style="color: rgb(209, 133, 219)">Astro</em> framework, I actually just learned how this works and went ahead to use it, 
-                    but I am already familiar with some <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> so it was pretty easy to learn.
-                </p>
+        </Block>
+    </section>
 
-                <p style="font-size: 90px; margin-top: 20px; text-align: center">:3</p>
+    <section class="main-body">
+        <Block blockTitle="Welcome">
 
-            </Block>
-        </div>
-        <div class="right-body">
-            <Block blockTitle="About Me">
-                <style>
-                    .skill {
-                        color: rgb(209, 133, 219);
-                        font-weight: bold;
-                    }
-                </style>
+          <style>
+              p strong {
+                  color: rgb(209, 133, 219);
+              }
 
-                <Image src={profilePicture} alt={'Profile Picture'} class="pfp" width={175} height={175}/>
+              block { 
+                flex: left;
+              }
+          </style>
 
-                <p style="text-align: center; font-size: 12px"><i>I'm a furry that loves to tinker with computers!</i></p>
+          <p id="quote"><q>Insert Quote Here</q> -Anon</p>
 
-                <h2>Quick Facts</h2>
-                <ul>
-                    <li>I go by the name <em style="color: rgb(209, 133, 219)">{identity.name}</em>.</li>
-                    <li>Two of my hobbies are: <em style="color:rgb(209, 133, 219)">{identity.hobbies[0]}</em> and <em style="color:rgb(209, 133, 219)">{identity.hobbies[1]}</em></li>
-                </ul>
+      <br />
 
-                <p>Things I can do!</p>
-                <ul>
-                    {identity.skills.map((skill) => <li class="skill">{skill}</li>)}
-                </ul>
-            </Block>
-        </div>
+      <article class="text">
+        
+        <p>Welcome to my website. I hope this page leaves good impressions on you as I have put lots of time and effort whenever I have freetime, to improve this website.</p>
+        <p>The intentions of making this website is to not only have a place to show off my skills in web development but to also store blog writings about anything in my interest.</p>
+        <p>Every page here has been made using the Astro Framework, entirely from scratch. Honestly I feel like using a template would be kind of cheating especially if I want to showcase web development skills...</p>
+        <p>The source code can be found on my github if you would like to look at how I did all this.</p>
+        <p>Anyways I hope you enjoy!</p>
+
+        <p id="cat-face">:3</p>
+
+      </article>
+
+      </Block>
+    </section>
     </div>
 </BaseLayout>
+

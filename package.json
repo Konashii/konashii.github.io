@@ -3,13 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
-    "astro": "^5.1.4"
+    "astro": "^5.16.16"
   }
 }
