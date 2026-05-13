@@ -1,53 +1,26 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Block from '../components/Block.astro';
 import '../styles/global.css';
+
+const posts = await getCollection('blog');
 ---
 
-<BaseLayout pageTitle="About Me!" tabTitle="Home">
-  <div class="index-body">
-    <section class="nav-body">
-        <Block blockTitle="Navigation">
+<BaseLayout pageTitle="About Me!" tabTitle="Home" posts={posts}>
+  <p id="quote"><q>Insert Quote Here</q> -Anon</p>
 
-            <nav class="navigation">
-              <a class="nav-link" href="/">Home</a>
-              <a class="nav-link" href="/blogs" style="margin-top: 0.5em">My Blogs</a>
-            </nav>
+  <br />
 
-        </Block>
-    </section>
-
-    <section class="main-body">
-        <Block blockTitle="Welcome">
-
-          <style>
-              p strong {
-                  color: rgb(209, 133, 219);
-              }
-
-              block { 
-                flex: left;
-              }
-          </style>
-
-          <p id="quote"><q>Insert Quote Here</q> -Anon</p>
-
-      <br />
-
-      <article class="text">
+  <article class="text">
         
-        <p>Welcome to my website. I hope this page leaves good impressions on you as I have put lots of time and effort whenever I have freetime, to improve this website.</p>
-        <p>The intentions of making this website is to not only have a place to show off my skills in web development but to also store blog writings about anything in my interest.</p>
-        <p>Every page here has been made using the Astro Framework, entirely from scratch. Honestly I feel like using a template would be kind of cheating especially if I want to showcase web development skills...</p>
-        <p>The source code can be found on my github if you would like to look at how I did all this.</p>
-        <p>Anyways I hope you enjoy!</p>
+    <p>Welcome to my website! I hope this page leaves good impressions on you as I have put lots of time and effort whenever I have freetime, to improve this website.</p>
+    <p>The intentions of making this website is to not only have a place to show off my skills in web development but to also store blog writings about anything in my interest.</p>
+    <p>Every page here has been made using the Astro Framework, <strong>entirely from scratch.</strong></p>
+    <p>The source code can be found on my github if you would like to look at how I did all this.</p>
+    <p>Anyways I hope you enjoy!</p>
 
-        <p id="cat-face">:3</p>
+    <p id="cat-face">:3</p>
 
-      </article>
-
-      </Block>
-    </section>
-    </div>
+  </article>
 </BaseLayout>
 

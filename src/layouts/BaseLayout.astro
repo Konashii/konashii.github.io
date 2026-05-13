@@ -1,9 +1,11 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import Block from '../components/Block.astro';
+import { ClientRouter } from 'astro:transitions';
 
-const { tabTitle } = Astro.props;
+
+const { pageTitle, tabTitle, posts = [] } = Astro.props;
 ---
 
 <html lang="en">
@@ -12,13 +14,25 @@ const { tabTitle } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{tabTitle}</title>
+    <title>{tabTitle}</title>
+
+    <ClientRouter />
+
 	</head>
-	<body>
-		<div class="background"></div>
-    <!-- <Header /> -->
-		<slot />
-    <!-- <Footer /> -->
-		<script>import '../scripts/menu.js';</script>
+  <body>
+    <div class="index-body">
+      <section class="nav-body">
+        <Block blockTitle="Navigation">
+          <Sidebar posts={posts} />
+        </Block>
+      </section>
+		  <div class="background"></div>
+      
+      <section class="main-body">
+        <Block blockTitle={pageTitle}>
+          <slot />
+        </Block>
+      </section>
+    </div>
 	</body>
 </html>
