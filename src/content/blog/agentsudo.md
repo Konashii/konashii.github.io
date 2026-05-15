@@ -77,7 +77,7 @@ It's now been discovered that Agent J's real name is James. And he has a login p
 
 ---
 
-### Privilege Escalation
+## Privilege Escalation
 
 So already logging in as `james`, we can grab the `user.txt`, and the the next question is asking about what incident was the photo taken place, which was `Roswell Alien Autopsy`, as titled by Fox news.
 

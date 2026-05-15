@@ -1,6 +1,7 @@
 
 html {
   font-family: sans-serif;
+  background-color: rgb(35, 35, 35);
 }
 
 body {
@@ -30,17 +31,6 @@ p, ul {
   to {transform:rotate(360deg);}
 }
 
-/* Main content */
-.background {
-  background-color: rgb(35, 35, 35);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-
 /* index style */
 .index-body, .blog-body {
   display: flex;
@@ -57,6 +47,7 @@ p, ul {
 
 .main-body {
   flex-basis: 80%;
+  min-width: 0;
 }
 
 .nav-link {
@@ -123,8 +114,14 @@ p, ul {
 }
 
 @media (max-width: 800px) {
+
+  body {
+    padding: 0;
+  }
+
   .index-body, .blog-body {
     flex-direction: column;
+    margin: 0;
   }
 
   .block {
